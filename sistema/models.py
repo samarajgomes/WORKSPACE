@@ -9,6 +9,7 @@ class Paciente (models.Model):
     sobrenome = models.CharField(max_length=50)
     email = models.EmailField() ## campo de email
     telefone = models.CharField(max_length=15) 
+    cpf =  models.CharField(max_length=11) #CPF com 11 digitos, sem traço e ponto
     criacao_data = models.DateTimeField(default=timezone.now) ## Pega o fuso horario atual e a data de hoje
     mensagem = models.TextField(blank=True) # Ela pode ficar em branco; não é obrigatório
     active = models.BooleanField(default=True) # Campo de exclusão lógica, caso o paciente seja desativado, não será excluido do banco de dados, apenas marcado como inativo

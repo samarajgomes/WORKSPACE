@@ -5,11 +5,9 @@ from django.http import HttpResponse
 # VIEWS -> sempre retornam algo; são funções. request -> response
 # View responsavel pela tela inicial do médico
 def medico_view(request):
-    print('Página funcionou')
-    return  HttpResponse('Página inicial do Médico') #def Obrigatoriamente retorna a alguma coisa
+    print('Página consulta funcionou')
+    return  HttpResponse('Página inicial da consulta') #def Obrigatoriamente retorna a alguma coisa
 
-def home(request):
-    print('Página home funcionou')
-    return  HttpResponse('Página home') 
+
 
 

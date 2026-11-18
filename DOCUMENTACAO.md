@@ -8,3 +8,17 @@
 6. ``python manage.py createsuperuser`` -> Criar um novo super usuário.
 7.`` python manage.py changepassword nomedousuario ``-> Altera a senha, caso você esqueça
 8. ``python manage.py makemigrations`` -> Cria/gera um novo pacote de migração (Util para novo app e alteração do BD)
+
+# TAGS DO DJANGO HTML
+> (% load static %) -> Habilita o static no arquivo. cada template que usa `(% static %)` precisa ser carregado
+> (% block title %) -> Insere o título da aba. As páginas filhas trocam.
+> (% block header %) -> O header público (logo+entrar). O `base_logado.html` troca por inteiro
+> (% block header_actions %) -> Só o botão "entrar". `O login.html` esvazia o bloco
+> (% include ... %) -> Insere as mensagens e/ou blocos de código
+> (% block content %) -> O miolo da página, cada filha vai ter seu próprio <main>
+
+## TAGS DE ROTA (importante)
+> {% url 'sistema:medico-list' %} -> Fica nos templates e se refere a uma lista de médicos que está no app sistema
+> {% url 'sistema:medico-update' %} -> Utilização no template com parâmetro para update do medico
+> {% url url_voltar %} -> url_voltar é o nome de uma variável que guarda uma lógica de retorno a página anterior
+> redirec('sistema:medico-list') -> Fica numa view e informa que quando uma ação for realizada, o usuário será redirecionado
