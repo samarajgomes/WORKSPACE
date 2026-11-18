@@ -64,3 +64,4 @@ class ConsultaForm(forms.ModelForm):
             'status': 'Status',
             'observacao': 'Observação',
         }
+
